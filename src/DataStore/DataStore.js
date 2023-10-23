@@ -19,7 +19,7 @@ function DataStore({ children }) {
             </storeData.Provider>
         </div>
     )
-}
+};
 
 export default DataStore
 
