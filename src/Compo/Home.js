@@ -42,7 +42,7 @@ function Home() {
                 </div>
                 <div className='seconddiv'>
                     <img src="https://blog-content.ixigo.com/wp-content/uploads/2016/09/shutterstock_386861746-770x430.jpg" alt="img not found" className='img2'></img>
-                    <img src="https://edinburgers.co.uk/wp-content/uploads/2023/01/travelling.jpg" alt="img not founds" className='img3'></img>
+                    <img src="https://content.jdmagicbox.com/comp/def_content/travel_agents/default-travel-agents-3.jpg" alt="img not founds" className='img3'></img>
                 </div>
             </div>
             <Slider />
