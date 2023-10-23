@@ -44,7 +44,7 @@
     .seconddiv {
         /* border: 2px solid black; */
         width: 32%;
-        min-height: 60vh;
+        height: 60vh;
         margin: 5px;
     }
 
