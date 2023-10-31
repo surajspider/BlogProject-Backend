@@ -2,8 +2,12 @@ import React, { useContext } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { storeData } from '../DataStore/DataStore';
 import { NavLink } from 'react-router-dom';
+import { navstate } from '../DataStore/NavBar';
 
 function News() {
+    var [navdata, navvisible] = useContext(navstate);
+    console.log(navdata);
+    navvisible(false);
     // var navitems = document.getElementById("navbarid");
     var navitems = document.getElementsByClassName("navflex")[0];
     navitems.style.display = "none";
@@ -49,6 +53,7 @@ function News() {
         head2nav.classList.remove("head2nav");
         dum.style.display = "none";
         buttons.classList.remove("buttons2");
+        navvisible(true);
         navi(`/${filteredCat}`);
     }
     return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Home from './Home';
 import Bollywood from './Bollywood';
 import Technology from './Technology';
@@ -10,8 +10,11 @@ import DataStore from '../DataStore/DataStore';
 
 import { Routes, Route, NavLink } from 'react-router-dom';
 import Menu from './Menu';
+import { navstate } from '../DataStore/NavBar';
+import NavbarCompo from './NavbarCompo';
 
 function Main() {
+    var [isnav] = useContext(navstate);
 
     // const handleClick = () => {
     //     var x = document.getElementById("navbarid");
@@ -29,21 +32,23 @@ function Main() {
 
     return (
         <>
-            <div className='headnav'>
-                <div className='topicnav topic2nav'>
-                    <NavLink style={{ textDecoration: "none", color: "black" }} to="/">
+            <div className='sticky'>
+                <div className='headnav'>
+                    <div className='topicnav topic2nav'>
+                        <NavLink style={{ textDecoration: "none", color: "black" }} to="/">
 
-                        <h1 className='heading' style={{ padding: 0, margin: "0px 0px 10px 0px" }}><span id='rotate'>The</span> <span className='siren'>Siren</span></h1>
-                    </NavLink>
+                            <h1 className='heading' style={{ padding: 0, margin: "0px 0px 10px 0px" }}><span id='rotate'>The</span> <span className='siren'>Siren</span></h1>
+                        </NavLink>
+                    </div>
+                    <div className='butnav'>
+                        <span className='dummybut' style={{ display: "none" }}>Get Started</span>
+                    </div>
                 </div>
-                <div className='butnav'>
-                    <span className='dummybut' style={{ display: "none" }}>Get Started</span>
+                <div className='menubutton'>
+                    <Menu />
                 </div>
-            </div>
-            <div className='menubutton'>
-                <Menu />
-            </div>
-            <div className='navbar' id='navbarid'>
+                {isnav ? <NavbarCompo /> : ""}
+                {/* <div className='navbar' id='navbarid'>
                 <div className="navflex">
                     <NavLink className='navlink' style={({ isActive }) => ({ color: isActive ? "grey" : "" })} to="/" ><h3>Home</h3></NavLink>
                     <NavLink className='navlink' style={({ isActive }) => ({ color: isActive ? "grey" : "" })} to="/Bollywood"><h3>Bollywood</h3></NavLink>
@@ -52,8 +57,9 @@ function Main() {
                     <NavLink className='navlink' style={({ isActive }) => ({ color: isActive ? "grey" : "" })} to="/Fitness"><h3>Fitness</h3></NavLink>
                     <NavLink className='navlink' style={({ isActive }) => ({ color: isActive ? "grey" : "" })} to="/Food"><h3>Food</h3></NavLink>
                 </div>
-            </div >
-            <hr className='navhr'></hr>
+            </div > */}
+                <hr className='navhr'></hr>
+            </div>
             <DataStore>
                 <Routes>
                     <Route path="/" element={<Home />} ></Route>

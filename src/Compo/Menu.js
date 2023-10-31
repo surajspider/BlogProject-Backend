@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+// import NavbarCompo from './NavbarCompo';
 
 function Menu() {
     const [toggle, setToggle] = useState(false);
@@ -18,6 +19,7 @@ function Menu() {
             <button className='menubutton buttons' onClick={toggleMenu}>
                 <img src='https://cdn-icons-png.flaticon.com/512/4663/4663114.png' alt="not found" style={{ width: "100%", height: "7vh" }} />
             </button>
+            {/* <NavbarCompo /> */}
             <div className='navbar' id='navbarid' style={menustyle}>
                 <div className="navflex">
                     <NavLink className='navlink' style={({ isActive }) => ({ color: isActive ? "grey" : "" })} to="/" onClick={shutmenu}><h3>Home</h3></NavLink>

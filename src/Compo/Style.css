@@ -8,6 +8,13 @@
         display: none;
     }
 
+    .sticky {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 5;
+    }
+
     .navflex {
         display: flex;
         flex-wrap: wrap;
@@ -613,6 +620,13 @@
 
 
 @media only screen and (min-width:700px) and (max-width:950px) {
+    .sticky {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 5;
+    }
+
     .navflex {
         display: flex;
         flex-wrap: wrap;
@@ -1228,6 +1242,13 @@
 }
 
 @media only screen and (max-width:650px) {
+    .sticky {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 5;
+    }
+
     .navflex {
         display: flex;
         flex-direction: column;

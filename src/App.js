@@ -2,6 +2,7 @@
 import './App.css';
 import './Compo/Style.css';
 import Main from './Compo/Main';
+import NavBar from './DataStore/NavBar';
 
 function App() {
   return (
@@ -20,7 +21,10 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Main />
+      <NavBar>
+        <Main />
+      </NavBar>
+
     </div>
   );
 }
