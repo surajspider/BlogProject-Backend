@@ -464,7 +464,7 @@
     .related_imgdiv {
         /* border: 2px solid blue; */
         width: 100%;
-        min-height: 25vh;
+        height: 25vh;
     }
 
     .related_contentdiv {
