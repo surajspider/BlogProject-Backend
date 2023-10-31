@@ -32,7 +32,7 @@ function Main() {
 
     return (
         <>
-            <div className='sticky'>
+            <div className='stickyz'>
                 <div className='headnav'>
                     <div className='topicnav topic2nav'>
                         <NavLink style={{ textDecoration: "none", color: "black" }} to="/">
